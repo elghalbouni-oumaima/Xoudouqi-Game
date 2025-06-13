@@ -1,6 +1,6 @@
 package xoudouqi.bo;
 
-import tp3exercice10.Position;
+import java.util.Objects;
 
 public class Position {
 	private int x,y;
@@ -32,6 +32,11 @@ public class Position {
 		if(this == o) return true;
 		if(o == null || o.getClass() != Position.class) return false;
 		return this.x == ((Position)o).x && this.y == ((Position)o).y; 
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(x,y);
 	}
 
 }

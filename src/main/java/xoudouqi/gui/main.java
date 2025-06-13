@@ -187,6 +187,7 @@ public class main {
 					try {
 						direction = i ==1?directions[1][isInList(directions[0], direction)]:direction;
 						e.handleGame(isInList(animals, animal), direction, i);
+						System.out.println();
 						e.affiche();
 						break;
 					} catch (ImpossibleMoveException e1) {
